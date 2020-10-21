@@ -106,6 +106,7 @@ namespace Intrinio
         private string username;
         private string password;
         private QuoteProvider provider;
+        private IQuoteProvider customProvider;
         private string token;
         private WebSocket ws;
         private bool ready = false;
@@ -129,12 +130,13 @@ namespace Intrinio
         /// <param name="username">Your Intrinio API Username</param>
         /// <param name="password">Your Intrinio API Password</param>
         /// <param name="provider">A QuoteProvider</param>
-        public RealTimeClient(QuoteProvider provider, string username = null, string password = null, string api_key = null)
+        public RealTimeClient(QuoteProvider provider, string username = null, string password = null, string api_key = null, IQuoteProvider customProvider = null)
         {
             this.api_key = api_key;
             this.username = username;
             this.password = password;
             this.provider = provider;
+            this.customProvider = customProvider;
 
             if (String.IsNullOrEmpty(this.api_key))
             {
@@ -334,7 +336,11 @@ namespace Intrinio
         private string MakeAuthUrl()
         {
             string url = null;
-            if (this.provider == QuoteProvider.IEX)
+            if (this.customProvider != null)
+            {
+                url = this.customProvider.AuthURL();
+            }
+            else if (this.provider == QuoteProvider.IEX)
             {
                 url = "https://realtime.intrinio.com/auth";
             }
@@ -401,7 +407,11 @@ namespace Intrinio
 
         private string MakeWebSocketUrl()
         {
-            if (this.provider == QuoteProvider.IEX)
+            if (this.customProvider != null)
+            {
+                return this.customProvider.MakeWebSocketUrl(this.token);
+            }
+            else if (this.provider == QuoteProvider.IEX)
             {
                 return "wss://realtime.intrinio.com/socket/websocket?vsn=1.0.0&token=" + this.token;
             }
