@@ -156,7 +156,7 @@ namespace Intrinio
                 }
             }
 
-            this.Logger = LogManager.GetLogger(this.GetType().FullName);
+            this.Logger = LogManager.GetLogger(this.GetType());
 
             Thread heartbeat = new Thread(new ThreadStart(this.SendHeartbeat));
             heartbeat.Start();
@@ -466,8 +466,9 @@ namespace Intrinio
                 this.Logger.Info(e.Data);
 
                 JObject reply_message = JObject.Parse(e.Data);
-                string reply_event = reply_message["event"].ToString();
-                if (reply_event == "phx_reply")
+                JToken tok;
+              
+                if (reply_message.TryGetValue("event", out tok) && tok.ToString() == "phx_reply")
                 {
                     string payload_status = reply_message["payload"]["status"].ToString();
                     string payload_response = reply_message["payload"]["response"].ToString();

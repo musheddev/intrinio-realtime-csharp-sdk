@@ -1,0 +1,670 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IntrinioRealTime</name>
+    </assembly>
+    <members>
+        <member name="T:Intrinio.CryptoLevel1Message">
+            <summary>
+            A Level 1 (price update) message from Cryptoquote
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.LastUpdated">
+            <summary>
+            The UTC timestamp of when the data was last updated
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.PairCode">
+            <summary>
+            The code of the crypto currency pair
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.PairName">
+            <summary>
+            The code of the crypto currency pair
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.ExchangeCode">
+            <summary>
+            The code of the crypto exchange
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.ExchangeName">
+            <summary>
+            The name of the crypto exchange
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.Bid">
+            <summary>
+            The bid price of the crypto currency pair
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.BidSize">
+            <summary>
+            The bid size of the crypto currency pair
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.Ask">
+            <summary>
+            The ask price of the crypto currency pair
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.AskSize">
+            <summary>
+            The ask size of the crypto currency pair
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.Change">
+            <summary>
+            The notional change in price
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.ChangePercent">
+            <summary>
+            The percent change in price
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.Volume">
+            <summary>
+            The volume of the crypto currency pair on the exchange
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.Open">
+            <summary>
+            The open price of the crypto currency pair on the exchange
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.High">
+            <summary>
+            The high price of the crypto currency pair on the exchange
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.Low">
+            <summary>
+            The low price of the crypto currency pair on the exchange
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.LastTradeTime">
+            <summary>
+            A UTC timestamp of the last trade time of the crypto currency pair on the exchange
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.LastTradeSide">
+            <summary>
+            The last trade side of the crypto currency pair on the exchange, either "buy" or "sell"
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.LastTradePrice">
+            <summary>
+            The last trade price of the crypto currency pair on the exchange
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.LastTradeSize">
+            <summary>
+            The last trade size of the crypto currency pair on the exchange
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel1Message.Type">
+            <summary>
+            The type of quote, either "book_update", "ticker", or "trade"
+            </summary>
+        </member>
+        <member name="M:Intrinio.CryptoLevel1Message.#ctor(System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single},System.String,System.String,System.Nullable{System.Single},System.Nullable{System.Single},System.String)">
+            <summary>
+            Initializes a CryptoTicker
+            </summary>
+            <param name="LastUpdated">The UTC timestamp of when the ticker data was last updated</param>
+            <param name="PairCode">The code of the crypto currency pair</param>
+            <param name="PairName">The name of the crypto currency pair</param>
+            <param name="ExchangeCode">The code fo the crypto exchange</param>
+            <param name="ExchangeName">The name of the crypto exchange</param>
+            <param name="Bid">The bid price of the crypto currency pair</param>
+            <param name="BidSize">The bid size of the crypto currency pair</param>
+            <param name="Ask">The ask price of the crypto currency pair</param>
+            <param name="AskSize">The ask size of the crypto currency pair</param>
+            <param name="Change">The notional change in price"</param>
+            <param name="ChangePercent">The percent change in price</param>
+            <param name="Volume">The volume of the crypto currency pair on the exchange</param>
+            <param name="Open">The open price of the crypto currency pair on the exchange</param>
+            <param name="High">The high price of the crypto currency pair on the exchange</param>
+            <param name="Low">The low price of the crypto currency pair on the exchange</param>
+            <param name="LastTradeTime">A UTC timestamp of the last trade time of the crypto currency pair on the exchange</param>
+            <param name="LastTradeSide">The last trade side of the crypto currency pair on the exchange, either "buy" or "sell"</param>
+            <param name="LastTradePrice">The last trade price of the crypto currency pair on the exchange</param>
+            <param name="LastTradeSize">The last trade size of the crypto currency pair on the exchange</param>
+            <param name="Type">The type of quote, either "book_update", "ticker", or "trade"</param>
+        </member>
+        <member name="M:Intrinio.CryptoLevel1Message.ToString">
+            <summary>
+            Returns a string representation of the ticker
+            </summary>
+            <returns>A string representation of the ticker</returns>
+        </member>
+        <member name="T:Intrinio.CryptoLevel2Message">
+            <summary>
+            A Level 2 (book update) message from Cryptoquote
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel2Message.PairCode">
+            <summary>
+            The code of the crypto currency pair
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel2Message.PairName">
+            <summary>
+            The code of the crypto currency pair
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel2Message.ExchangeCode">
+            <summary>
+            The code of the crypto exchange
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel2Message.ExchangeName">
+            <summary>
+            The name of the crypto exchange
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel2Message.Price">
+            <summary>
+            The price of the crypto currency pair of the book update
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel2Message.Side">
+            <summary>
+            The side of the book update, either "buy" or "sell"
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel2Message.Size">
+            <summary>
+            The size of the book update
+            </summary>
+        </member>
+        <member name="P:Intrinio.CryptoLevel2Message.Type">
+            <summary>
+            The type of quote, either "book_update", "ticker", or "trade"
+            </summary>
+        </member>
+        <member name="M:Intrinio.CryptoLevel2Message.#ctor(System.String,System.String,System.String,System.String,System.Single,System.String,System.Single,System.String)">
+            <summary>
+            Initializes a CryptoBookUpdate
+            </summary>
+            <param name="PairCode">The code of the crypto currency pair</param>
+            <param name="PairName">The name of the crypto currency pair</param>
+            <param name="ExchangeCode">The code fo the crypto exchange</param>
+            <param name="ExchangeName">The name of the crypto exchange</param>
+            <param name="Price">The price of the crypto currency pair of the book update</param>
+            <param name="Side">The side of the book update, either "buy" or "sell"</param>
+            <param name="Size">The size of the book update</param>
+            <param name="Type">The type of quote, either "book_update", "ticker", or "trade"</param>
+        </member>
+        <member name="M:Intrinio.CryptoLevel2Message.ToString">
+            <summary>
+            Returns a string representation of the book_update
+            </summary>
+            <returns>A string representation of the book_update</returns>
+        </member>
+        <member name="T:Intrinio.FxcmPrice">
+            <summary>
+            A price update message from FXCM
+            </summary>
+        </member>
+        <member name="P:Intrinio.FxcmPrice.Time">
+            <summary>
+            The UTC timestamp of when the data was last updated
+            </summary>
+        </member>
+        <member name="P:Intrinio.FxcmPrice.Code">
+            <summary>
+            The code of the fx currency pair
+            </summary>
+        </member>
+        <member name="P:Intrinio.FxcmPrice.BidPrice">
+            <summary>
+            The bid price of the fx currency pair
+            </summary>
+        </member>
+        <member name="P:Intrinio.FxcmPrice.AskPrice">
+            <summary>
+            The ask price of the fx currency pair
+            </summary>
+        </member>
+        <member name="M:Intrinio.FxcmPrice.#ctor(System.String,System.String,System.Nullable{System.Single},System.Nullable{System.Single})">
+            <summary>
+            Initializes a FxcmPrice
+            </summary>
+            <param name="Time">The UTC timestamp of the price update</param>
+            <param name="Code">The code of the fx currency pair</param>
+            <param name="BidPrice">The bid price of the fx currency pair</param>
+            <param name="AskPrice">The ask price of the fx currency pair</param>
+        </member>
+        <member name="M:Intrinio.FxcmPrice.ToString">
+            <summary>
+            Returns a string representation of the price update
+            </summary>
+            <returns>A string representation of the price update</returns>
+        </member>
+        <member name="T:Intrinio.IexQuote">
+            <summary>
+            A Quote from IEX
+            </summary>
+        </member>
+        <member name="P:Intrinio.IexQuote.Type">
+            <summary>
+            The type of quote, either "bid", "ask", or "last"
+            </summary>
+        </member>
+        <member name="P:Intrinio.IexQuote.Ticker">
+            <summary>
+            The security ticker
+            </summary>
+        </member>
+        <member name="P:Intrinio.IexQuote.Price">
+            <summary>
+            The quote price
+            </summary>
+        </member>
+        <member name="P:Intrinio.IexQuote.Size">
+            <summary>
+            The size of the order or trade
+            </summary>
+        </member>
+        <member name="P:Intrinio.IexQuote.Timestamp">
+            <summary>
+            The unix timestamp of the quote
+            </summary>
+        </member>
+        <member name="M:Intrinio.IexQuote.#ctor(System.String,System.String,System.Decimal,System.Int64,System.Decimal)">
+            <summary>
+            Initializes an IexQuote
+            </summary>
+            <param name="Type">The type of quote, either "bid", "ask", or "last"</param>
+            <param name="Ticker">The security ticker</param>
+            <param name="Price">The quote price</param>
+            <param name="Size">The size of the order or trade</param>
+            <param name="Timestamp">The unix timestamp of the quote</param>
+        </member>
+        <member name="M:Intrinio.IexQuote.ToString">
+            <summary>
+            Returns a string representation of the quote
+            </summary>
+            <returns>A string representation of the quote</returns>
+        </member>
+        <member name="T:Intrinio.QuoddBookQuote">
+            <summary>
+            A Book Quote from QUODD
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddBookQuote.AskSize">
+            <summary>
+            The amount of a security that a market maker is offering to sell at the ask price
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddBookQuote.QuoteTime">
+            <summary>
+            Time of the quote in milliseconds
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddBookQuote.Rtl">
+            <summary>
+            Record Transaction Level - number of records published that day
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddBookQuote.Ticker">
+            <summary>
+            Stock Symbol for the security
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddBookQuote.AskExchange">
+            <summary>
+            The market center from which the ask is being quoted
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddBookQuote.AskPrice4d">
+            <summary>
+            The price a seller is willing to accept for a security
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddBookQuote.BidExchange">
+            <summary>
+            The market center from which the bid is being quoted
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddBookQuote.BidPrice4d">
+            <summary>
+            A bid price is the price a buyer is willing to pay for a security.
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddBookQuote.BidSize">
+            <summary>
+            The bid size number of shares being offered for purchase at a specified bid price
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddBookQuote.ProtocolId">
+            <summary>
+            Internal Quodd ID defining Source of Data
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddBookQuote.RootTicker">
+            <summary>
+            Underlying symbol for a particular contract
+            </summary>
+        </member>
+        <member name="M:Intrinio.QuoddBookQuote.#ctor(System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.Int64},System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.String)">
+            <summary>
+            Initializes an QuoddBookQuote
+            </summary>
+        </member>
+        <member name="M:Intrinio.QuoddBookQuote.ToString">
+            <summary>
+            Returns a string representation of the quote
+            </summary>
+            <returns>A string representation of the quote</returns>
+        </member>
+        <member name="T:Intrinio.QuoddTradeQuote">
+            <summary>
+            A Trade Quote from QUODD
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.ChangePrice4d">
+            <summary>
+            The difference between the closing price of a security on the current trading day and the previous day's closing price.
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.DayHigh4d">
+            <summary>
+            A security's intra-day high trading price.
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.DayHighTime">
+            <summary>
+            Time that the security reached a new high
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.DayLow4d">
+            <summary>
+            A security's intra-day low trading price.
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.DayLowTime">
+            <summary>
+            Time that the security reached a new low
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.ExtChangePrice4d">
+            <summary>
+            Extended hours change price (pre or post market)
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.ExtLastPrice4d">
+            <summary>
+            Extended hours last price (pre or post market)
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.ExtPercentChange4d">
+            <summary>
+            Extended hours percent change (pre or post market)
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.ExtTradeExchange">
+            <summary>
+            Extended hours exchange where last trade took place (Pre or post market)
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.ExtTradeTime">
+            <summary>
+            Time of the extended hours trade in milliseconds
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.ExtTradeVolume">
+            <summary>
+            The amount of shares traded for a single extended hours trade
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.ExtUpDown">
+            <summary>
+            Extended hours tick indicator - up or down
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.IsHalted">
+            <summary>
+            A flag indicating that the stock is halted and not currently trading
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.IsShortRestricted">
+            <summary>
+            A flag indicating the stock is current short sale restricted - meaning you can not short sale the stock when true
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.LastPrice4d">
+            <summary>
+            The price at which the security most recently traded
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.OpenPrice4d">
+            <summary>
+            The price at which a security first trades upon the opening of an exchange on a given trading day
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.OpenTime">
+            <summary>
+            The time at which the security opened in milliseconds
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.OpenVolume">
+            <summary>
+            The number of shares that that were traded on the opening trade
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.PercentChange4d">
+            <summary>
+            The percentage at which the security is up or down since the previous day's trading
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.PrevClose4d">
+            <summary>
+            The security's closing price on the preceding day of trading
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.ProtocolId">
+            <summary>
+            Internal Quodd ID defining Source of Data
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.RootTicker">
+            <summary>
+            Underlying symbol for a particular contract
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.Rtl">
+            <summary>
+            Record Transaction Level - number of records published that day
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.Ticker">
+            <summary>
+            Stock Symbol for the security
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.TotalVolume">
+            <summary>
+            The accumulated total amount of shares traded
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.TradeExchange">
+            <summary>
+            The market center where the last trade occurred
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.TradeTime">
+            <summary>
+            The time at which the security last traded in milliseconds
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.TradeVolume">
+            <summary>
+            The number of shares that that were traded on the last trade
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.UpDown">
+            <summary>
+            Tick indicator - up or down - indicating if the last trade was up or down from the previous trade
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.VolumePlus">
+            <summary>
+            NASDAQ volume plus the volumes from other market centers to more accurately match composite volume. Used for NASDAQ Basic
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoddTradeQuote.Vwap4d">
+            <summary>
+            Volume weighted Average Price. VWAP is calculated by adding up the dollars traded for every transaction (price multiplied by number of shares traded) and then dividing by the total shares traded for the day.
+            </summary>
+        </member>
+        <member name="M:Intrinio.QuoddTradeQuote.#ctor(System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int64},System.String,System.Nullable{System.Int64},System.String,System.Nullable{System.Int64},System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.String,System.Nullable{System.Int64},System.Nullable{System.Int64})">
+            <summary>
+            Initializes an QuoddTradeQuote
+            </summary>
+        </member>
+        <member name="M:Intrinio.QuoddTradeQuote.ToString">
+            <summary>
+            Returns a string representation of the quote
+            </summary>
+            <returns>A string representation of the quote</returns>
+        </member>
+        <member name="T:Intrinio.QuoteHandler">
+            <summary>
+            A handler for incoming price quotes
+            </summary>
+        </member>
+        <member name="P:Intrinio.QuoteHandler.Client">
+            <summary>
+            A reference to the Intrinio RealTimeClient
+            </summary>
+        </member>
+        <member name="T:Intrinio.QuoteHandler.QuoteDelegate">
+            <summary>
+            A delegate for handling quotes
+            </summary>
+            <param name="quote">An IQuote</param>
+        </member>
+        <member name="E:Intrinio.QuoteHandler.OnQuote">
+            <summary>
+            An event for when a quote is provided for handling
+            </summary>
+        </member>
+        <member name="M:Intrinio.QuoteHandler.Listen">
+            <summary>
+            Loops indefinitely, blocking until a quote can be retrieved from the client and emitted to the OnQuote event
+            </summary>
+        </member>
+        <member name="T:Intrinio.QuoteProvider">
+            <summary>
+            The available providers/vendors of real-time price quotes. Each provider requires a subscription from https://intrinio.com
+            </summary>
+        </member>
+        <member name="F:Intrinio.QuoteProvider.IEX">
+            <summary>
+            The Investor's Exchange https://iextrading.com/
+            </summary>
+        </member>
+        <member name="F:Intrinio.QuoteProvider.QUODD">
+            <summary>
+            QUODD http://home.quodd.com/
+            </summary>
+        </member>
+        <member name="F:Intrinio.QuoteProvider.CRYPTOQUOTE">
+            <summary> Cryptoquote https://cryptoquote.io </summary>
+        </member>
+        <member name="F:Intrinio.QuoteProvider.FXCM">
+            <summary> FXCM https://www.fxcm.com/ </summary>
+        </member>
+        <member name="T:Intrinio.RealTimeClient">
+            <summary>
+            Intrinio's client for receiving real-time stock prices via a WebSocket connection.
+            </summary>
+        </member>
+        <member name="P:Intrinio.RealTimeClient.Logger">
+            <summary>
+            A log4net logger instance. By default a console logger that logs INFO-level messages, but you can set your own configured logger.
+            </summary>
+        </member>
+        <member name="M:Intrinio.RealTimeClient.#ctor(Intrinio.QuoteProvider,System.String,System.String,System.String,Intrinio.IQuoteProvider)">
+            <summary>
+            Initializes a new real-time client instance.
+            </summary>
+            <param name="api_key">Your Intrinio API Key</param>
+            <param name="username">Your Intrinio API Username</param>
+            <param name="password">Your Intrinio API Password</param>
+            <param name="provider">A QuoteProvider</param>
+        </member>
+        <member name="M:Intrinio.RealTimeClient.Connect">
+            <summary>
+            Establishes a WebSocket connection and starts listening for price quotes. Attempts to self-heal if the connection is interrupted or dropped. This method will return after a connection is established. You may want to block the thread afterwards in order to allow the client to keep listening for prices.
+            </summary>
+        </member>
+        <member name="M:Intrinio.RealTimeClient.Disconnect">
+            <summary>
+            Severs the WebSocket connection and stops listening for quotes.
+            </summary>
+        </member>
+        <member name="M:Intrinio.RealTimeClient.RegisterQuoteHandler(Intrinio.QuoteHandler)">
+            <summary>
+            Registers a QuoteHandler instance to handle quotes in the client's queue. Multiple QuoteHandler instances can be registered. Quotes will be taken off the queue and given to the next available QuoteHander.
+            </summary>
+            <param name="handler">An instance of QuoteHandler</param>
+        </member>
+        <member name="M:Intrinio.RealTimeClient.GetNextQuote">
+            <summary>
+            Blocks until a quote can be dequeued from the queue/
+            </summary>
+            <returns>An IQuote</returns>
+        </member>
+        <member name="M:Intrinio.RealTimeClient.QueueSize">
+            <summary>
+            Returns the size of the quote queue. Monitor this to make sure your QuoteHandler instances are not falling behind.
+            </summary>
+            <returns>An integer representing the size of the quote queue</returns>
+        </member>
+        <member name="M:Intrinio.RealTimeClient.Join(System.String)">
+            <summary>
+            Listen for price quotes on the given channel.
+            </summary>
+            <param name="channel">A channel to join, which may be a security ticker such as "AAPL"</param>
+        </member>
+        <member name="M:Intrinio.RealTimeClient.Join(System.String[])">
+            <summary>
+            Listen for price quotes on the given channels.
+            </summary>
+            <param name="channels">The channels to join, which may be a list of security tickers such as "AAPL"</param>
+        </member>
+        <member name="M:Intrinio.RealTimeClient.Leave(System.String)">
+            <summary>
+            Stop listening for price quotes on the given channel.
+            </summary>
+            <param name="channel">A channel to leave, which may be a security ticker such as "AAPL"</param>
+        </member>
+        <member name="M:Intrinio.RealTimeClient.Leave(System.String[])">
+            <summary>
+            Stop listening for price quotes on the given channels.
+            </summary>
+            <param name="channels">The channels to leave, which may be a list of security tickers such as "AAPL"</param>
+        </member>
+        <member name="M:Intrinio.RealTimeClient.LeaveAll">
+            <summary>
+            Stop listening for price quotes on all channels.
+            </summary>
+        </member>
+        <member name="M:Intrinio.RealTimeClient.SetChannels(System.String[])">
+            <summary>
+            Stop listening for price quotes on all channels, then start listening for price quotes on the given channels
+            </summary>
+            <param name="channels">The channels to join, which may be a list of security tickers such as "AAPL"</param>
+        </member>
+        <member name="M:Intrinio.RealTimeClient.Dispose">
+            <summary>
+            Disposes of the client. 
+            </summary>
+        </member>
+    </members>
+</doc>
