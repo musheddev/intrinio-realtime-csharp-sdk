@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntrinioRealTimeSDK", "IntrinioRealTimeSDK.csproj", "{2E008C42-2065-46D1-AB37-30F23FD4E5B4}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TestClient", "TestClient\TestClient.fsproj", "{3A83BEE7-6412-4847-B99C-0FA5C32427BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2E008C42-2065-46D1-AB37-30F23FD4E5B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E008C42-2065-46D1-AB37-30F23FD4E5B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E008C42-2065-46D1-AB37-30F23FD4E5B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A83BEE7-6412-4847-B99C-0FA5C32427BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A83BEE7-6412-4847-B99C-0FA5C32427BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A83BEE7-6412-4847-B99C-0FA5C32427BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A83BEE7-6412-4847-B99C-0FA5C32427BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

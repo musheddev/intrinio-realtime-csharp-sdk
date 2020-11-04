@@ -4,6 +4,8 @@ using System.Net;
 using System.Text;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using WebSocketSharp;
 using Newtonsoft.Json;
@@ -158,6 +160,20 @@ namespace Intrinio
 
             this.Logger = LogManager.GetLogger(this.GetType());
 
+            ServicePointManager.ServerCertificateValidationCallback = 
+                delegate(Object obj, X509Certificate certificate, X509Chain chain, SslPolicyErrors errors)
+                {
+                    if (errors == SslPolicyErrors.RemoteCertificateNameMismatch)
+                    {
+                        return (true);
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                };
+            
+            
             Thread heartbeat = new Thread(new ThreadStart(this.SendHeartbeat));
             heartbeat.Start();
             this.runningThreads.Add(heartbeat);
